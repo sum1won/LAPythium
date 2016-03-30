@@ -1622,16 +1622,13 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_anycode -1106
+
+#newevent  #msg "Noprophet." --galli to heretic1
+#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
 #req_targmnr 6432
 #transform 6451
-#nolog
-#notext
 #end
-#newevent  #msg "Noprophet." 
+#newevent  #msg "Noprophet." --galli to heretic2
 #rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
 #req_targmnr 6432
 #transform 6451

@@ -29,6 +29,368 @@
 #researchlevel 8
 #restricted 9
 #fatiguecost 2000
+#effect 10021
+#damage (INSERT DAUGHTER OF TYPHON HERE)
+#end
+
+-----Cult toggle
+
+---Toggle
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_owncapital 1
+#req_fornation 61
+#req_code 0
+#code -1100
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code 0
+#req_anycode -1100
+#req_monster 6413 --serpent prophet
+#code -1101
+#nolog
+#notext
+#end
+
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 761
+#req_nomnr 6413 --serpent prophet
+#req_targorder 7
+#transform 6413
+#code -1102
+#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
+#req_anycode -1101
+#req_code -1100
+#code -1102
+#end
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
+#req_monster 6413
+#req_code -1100
+#code -1102
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_anycode -1102
+#req_code -1101
+#code 0
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1102
+#req_nomnr 6413 --serpent prophet
+#code -1100
+#nolog
+#notext
+#end
+
+---
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code 0
+#req_anycode -1100
+#req_monster 6414 --helio prphet
+#code -1103
+#nolog
+#notext
+#end
+
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 1873
+#req_nomnr 6414 --serpent prophet
+#req_targorder 7
+#transform 6414
+#code -1104
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#end
+
+#newevent --capital prophet
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#req_monster 6414
+#req_code -1100
+#code -1104
+#nolog
+#end
+
+#newevent --noncapital prophet
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#req_anycode -1103
+#req_code -1100
+#code -1104
+#nolog
+#end
+
+#newevent --leakclose
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_anycode -1104
+#req_code -1103
+#code 0
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1104
+#req_nomnr  6414 --helio prphet
+#code -1100
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The Second Sun is a sign of the power of the new god in his aspect of the Solar Bull.  Sacred servants of the Solar Bull shall flood out from every temple!"
+#req_code -1104
+#req_friendlyench 81 
+#code -1107
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1107
+#req_nomnr  6414 --helio prphet deth
+#code -1100
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1107
+#req_hostileench 81 --hostilesun
+#code -1104
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1107
+#req_noench 81 --nosun
+#code -1104
+#nolog
+#notext
+#end
+
+#newevent --5X abandonment events for no second sun.
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_noench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_noench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_noench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_noench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_noench 81
+#killmon 6436
+#end
+
+--- Five abandonment events for hostile secondsun
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_hostileench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_hostileench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_hostileench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_hostileench 81
+#killmon 6436
+#end
+#newevent 
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6414
+#req_hostileench 81
+#killmon 6436
+#end
+
+----Cult of fertility
+#newevent --notice of prophetization
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code 0
+#req_anycode -1100
+#req_monster 6415 --epoptes prophet/reveler
+#code -1105
+#nolog
+#notext
+#end
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 1880 --reveler
+#req_nomnr 6415 --archgalli prophet
+#req_targorder 7
+#transform 6415
+#code -1106
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
+#end
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 1875 --epoptes
+#req_nomnr 6415 --archgalli prophet
+#req_targorder 7
+#transform 6415
+#code -1106
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1100
+#req_monster 6415
+#code -1106
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1100
+#req_anycode -1105
+#code -1106
+#end
+
+#newevent --clears eventcode
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_anycode -1106
+#req_code -1105
+#code 0
+#nolog
+#notext
+#end
+
+#newevent --prophet dies
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1106
+#req_nomnr 6415 --epoptes prophet/reveler
+#code -1100
+#nolog
+#notext
 #end
 
 ---- SERPENT CULT
@@ -269,6 +631,7 @@
 #newspell --summon hydra
 #name "Summon Hydra"
 #onlyatsite 1815
+#restricted 61
 #path 0 6
 #path 1 8
 #pathlevel 0 3
@@ -278,10 +641,9 @@
 #damage 1850
 #fatiguecost 1000
 #school 0
-#researchlevel 5
+#researchlevel 4
 #nextspell "Summon Hydra Hatchlings"
 #descr "With an appropriate sacrifice, a member of the Serpent Cult can enter a Serpent Temple and summon a Hydra to serve the new god. This spell may only be cast at a Serpent Temple after the god has endorsed the cult."
-#researchlevel 
 #end
 
 #newmonster 6431
@@ -446,9 +808,11 @@ may make the battlefield deadly even for the priest's allies."
 #newspell
 #name "Daughter of Typhon"
 #descr "The mage enters the misty swamps of Pythia to find the entrance to the underworld hidden there. Once there the mage will lure the guardian of the gate to the Temple of Serpents, where it can be bound to his service. The guardian is a beast of might and malice unequaled. She is the daughter of Typhon, Enemy of Gods, and Echidna, Mother of Monsters and her name is Hydra. Like her lesser kin, she has nine heads. However, her central head is blessed by her father and is immortal. Should it be cut off a new body will regrow from the stump within weeks. Hydra is sacred."
+#effect 10021
+#damage (INSERT DAUGHTER OF TYPHON HERE)
 #school 0
 #path 0 6
-#pathlevel 0 5
+#pathlevel 0 4
 #path 1 5
 #pathlevel 1 2
 #researchlevel 7
@@ -1695,366 +2059,7 @@ may make the battlefield deadly even for the priest's allies."
 #descr "Throughout the Empire, mystery cults have spread and flourished with the influx of foreign culture. One of these, the Serpent Cult, has replaced the official state cult of the Theurgs, but many others ply their trade in secret. The Cult of Fertility in its aspect of The Great Mother is very popular among women and most of the members in its higher ranks are female. The Mystes is a low ranking follower of the Great Mother.  The liturgy of the mystery cult is heavily influenced by the Arcoscephalean priestesses, but the Mystes are not initiated in the art of healing. Unlike her elder sister, the Epoptes, the Mystes doesn't initiate others into the Cult. She wears a garland and a green dress. The Epoptes and Mystes are secretive and do not share their wisdom with outsiders. This makes them rather poor researchers."
 #end
 
----------Events
-
----Toggle
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_owncapital 1
-#req_fornation 61
-#req_code 0
-#code -1100
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code 0
-#req_anycode -1100
-#req_monster 6413 --serpent prophet
-#code -1101
-#nolog
-#notext
-#end
-
-
-#newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1100
-#req_monster 761
-#req_nomnr 6413 --serpent prophet
-#req_targorder 7
-#transform 6413
-#code -1102
-#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
-#req_anycode -1101
-#req_code -1100
-#code -1102
-#end
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
-#req_monster 6413
-#req_code -1100
-#code -1102
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_anycode -1102
-#req_code -1101
-#code 0
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1102
-#req_nomnr 6413 --serpent prophet
-#code -1100
-#nolog
-#notext
-#end
-
----
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code 0
-#req_anycode -1100
-#req_monster 6414 --helio prphet
-#code -1103
-#nolog
-#notext
-#end
-
-
-#newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1100
-#req_monster 1873
-#req_nomnr 6414 --serpent prophet
-#req_targorder 7
-#transform 6414
-#code -1104
-#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
-#req_monster 6414
-#req_code -1100
-#code -1104
-#nolog
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
-#req_anycode -1103
-#req_code -1100
-#code -1104
-#nolog
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_anycode -1104
-#req_code -1103
-#code 0
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1104
-#req_nomnr  6414 --helio prphet
-#code -1100
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The Second Sun is a sign of the power of the new god in his aspect of the Solar Bull.  Sacred servants of the Solar Bull shall flood out from every temple!"
-#req_code -1104
-#req_friendlyench 81 
-#code -1107
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1107
-#req_nomnr  6414 --helio prphet deth
-#code -1100
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1107
-#req_hostileench 81 --hostilesun
-#code -1104
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1107
-#req_noench 81 --nosun
-#code -1104
-#nolog
-#notext
-#end
-
-#newevent --5X abandonment events for no second sun.
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_noench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_noench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_noench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_noench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_noench 81
-#killmon 6436
-#end
-
---- Five abandonment events for hostile secondsun
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6414
-#req_hostileench 81
-#killmon 6436
-#end
----
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code 0
-#req_anycode -1100
-#req_monster 6415 --epoptes prophet/reveler
-#code -1105
-#nolog
-#notext
-#end
-
-#newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1100
-#req_monster 1880 --reveler
-#req_nomnr 6415 --archgalli prophet
-#req_targorder 7
-#transform 6415
-#code -1106
-#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
-#end
-
-#newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1100
-#req_monster 1875 --epoptes
-#req_nomnr 6415 --archgalli prophet
-#req_targorder 7
-#transform 6415
-#code -1106
-#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
-#req_code -1100
-#req_monster 6415
-#code -1106
-#end
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
-#req_code -1100
-#req_anycode -1105
-#code -1106
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_anycode -1106
-#req_code -1105
-#code 0
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1106
-#req_nomnr 6415 --epoptes prophet/reveler
-#code -1100
-#nolog
-#notext
-#end
-
-
-----newunits
+----genericus
 
 #newarmor 754
 #name "Clipeus"

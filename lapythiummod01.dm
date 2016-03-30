@@ -1,15 +1,17 @@
-#modname "LA_Pythium trial"
+#modname "PythiumSyncretism"
 #description "Modifies LA Pythium extensively through the use of cults.  Prophetize a Serpent Priest, Heliodromus, or Epoptes/Reveler to get the full effect"
-#version 1
+#version 2
+#icon "./summod/pythium.tga"
+
 ------
 
-#selectnation  61 --la pythium
+#selectnation  61
 #end
 
 #newevent 
 #rarity 5
 #nation -2 
-#msg "Thank you for playing this mod.  This message exists to let you know that you now have a host of new national spells, units, and abilities - but they can only be used if the appropriate cult is endorsed.  You may endorse a cult by naming a leader of that cult as your prophet.  Prophetizing a Serpent Priest will endorse the Serpent Cult, prophetizing a Heliodromus will endorse the Solar cult, and prophetizing a Reveler or Epoptes will endorse the Cult of Fertility.  This message will save to your province history for reference."
+#msg "Thank you for playing this mod.  This message exists to let you know that you now have a host of new national spells, units, and abilities - but they can only be used if the appropriate cult is endorsed.  You may endorse a cult by naming a leader of that cult as your prophet.   Prophetizing a Serpent Priest will endorse the Serpent Cult, prophetizing a Heliodromus will endorse the Solar cult, and prophetizing a Reveler or Epoptes will endorse the Cult of Fertility.  NOTE: If, for some reason, such as disciple mode, you cannot create a prophet, you can circumvent this by ordering the appropriate mage to site search in your capital. This message will save to your province history for reference."
 #req_fornation 49
 #req_owncapital 1
 #req_unique 1
@@ -84,7 +86,6 @@
 
 #newevent #msg "Enemy. [Temple of the Serpents]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1 
 #removesite 1815 #end
-
 
 #newmonster 6426 --serpent priest holyboost
 #copystats 761
@@ -533,9 +534,21 @@ may make the battlefield deadly even for the priest's allies."
 #newmonster 6420--leo nonheretic, 2 events
 #name "Leo"
 #copyspr 1872
-#rcost 1 #gcost 80 #hp 14 #mr 11 #mor 14 #str 12 #att 13 #def 13 #enc 3
-#mapmove 2 #ap 12 #goodleader #inspirational 1
-#fireres 10 #magicskill 0 1
+#rcost 1 
+#gcost 80 
+#hp 14 
+#mr 11 
+#mor 14 
+#str 12 
+#att 13 
+#def 13 
+#enc 3
+#mapmove 2 
+#ap 12 
+#goodleader 
+#inspirational 1
+#fireres 10 
+#magicskill 0 1
 #researchbonus -2
 #firepower 1
 #weapon 8
@@ -867,7 +880,7 @@ may make the battlefield deadly even for the priest's allies."
 #fatiguecost 500
 #restricted 61
 #onlyatsite 1816
-#descr "A Heliodromus beseeches the Solar Bull for aid, who sends his progeny to aid the armies of th Cult of the Solar Bull.  This spell may only be cast at a Mithrea, a temple of the Solar Bull."
+#descr "A Heliodromus beseeches the Solar Bull for aid, who sends his progeny to aid the armies of the Cult of the Solar Bull.  This spell may only be cast at a Mithrea, a temple of the Solar Bull."
 #end
 
 #newevent
@@ -1332,14 +1345,14 @@ may make the battlefield deadly even for the priest's allies."
 
 #newspell 
 #name "Guardian of Fertility"
-#descr "With this spell, a Galli transforms themself into the shape of a monsterous boar to find and destroy sneaking enemies. The Galli has reduced magical powers in this form, but can change back at will. This spell can only be cast in the temples of the Cult of Fertility."
+#descr "With this spell, a Galli transforms themself into the shape of a monsterous boar to find and destroy sneaking enemies. The Galli can change back at will. This spell can only be cast in the temples of the Cult of Fertility."
 #path 0 3
 #pathlevel 0 1
 #path 1 8
 #pathlevel 1 2
 #restricted 61
 #onlyatsite 1817
-#fatiguecost 500
+#fatiguecost 1000
 #school 1
 #researchlevel 4
 #effect 10001
@@ -1356,7 +1369,7 @@ may make the battlefield deadly even for the priest's allies."
 #pathlevel 1 2
 #restricted 61
 #onlyatsite 1817
-#fatiguecost 800
+#fatiguecost 1000
 #school 1
 #researchlevel 5
 #effect 10001
@@ -1474,8 +1487,8 @@ may make the battlefield deadly even for the priest's allies."
 #copyspr 514
 #mr 14
 #summerpower 25
-#magicboost 53 -2
-#magicboost 8 2
+#magicboost 53 -1
+#magicboost 8 1
 #shapechange 6432
 #assassin
 #patience 1
@@ -1509,8 +1522,6 @@ may make the battlefield deadly even for the priest's allies."
 #forestsurvival
 #summerpower 25
 #shapechange 6432
-#magicboost 53 -1
-#magicboost 8 1
 #okleader
 #beastmaster 1
 #inspirational 1
@@ -1607,21 +1618,22 @@ may make the battlefield deadly even for the priest's allies."
 #req_site 1
 #end
 
-#newevent  #msg "lion. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
-#req_monster 6445
-#req_targmnr 6432
-#transform 6447
-#killmon 6445
-#req_site 1
-#end
-
 #newevent  #msg "boar. [Anaktoron]." 
 #rarity 5  #nation -2 #notext #nolog  
 #req_monster 6446
 #req_targmnr 6432
 #transform 6448
 #killmon 6446
+#req_site 1
+#req_targpath1 3
+#end
+
+#newevent  #msg "lion. [Anaktoron]." 
+#rarity 5  #nation -2 #notext #nolog  
+#req_monster 6445
+#req_targmnr 6432
+#transform 6447
+#killmon 6445
 #req_site 1
 #end
 
@@ -1686,6 +1698,7 @@ may make the battlefield deadly even for the priest's allies."
 ---------Events
 
 ---Toggle
+
 #newevent
 #rarity 5 #req_fornation 61 #nation -2  
 #msg "nope"
@@ -1706,6 +1719,19 @@ may make the battlefield deadly even for the priest's allies."
 #code -1101
 #nolog
 #notext
+#end
+
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 761
+#req_nomnr 6413 --serpent prophet
+#req_targorder 7
+#transform 6413
+#code -1102
+#msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
 #end
 
 #newevent
@@ -1755,6 +1781,19 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 1873
+#req_nomnr 6414 --serpent prophet
+#req_targorder 7
+#transform 6414
+#code -1104
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#end
+
 #newevent
 #rarity 5 #req_fornation 61 #nation -2  
 #msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
@@ -1763,6 +1802,7 @@ may make the battlefield deadly even for the priest's allies."
 #code -1104
 #nolog
 #end
+
 #newevent
 #rarity 5 #req_fornation 61 #nation -2  
 #msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
@@ -1954,6 +1994,30 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 1880 --reveler
+#req_nomnr 6415 --archgalli prophet
+#req_targorder 7
+#transform 6415
+#code -1106
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
+#end
+
+#newevent  --- if you can't name a prophet normally
+#rarity 5 #req_fornation 61 #nation -2  
+#msg "nope"
+#req_code -1100
+#req_monster 1875 --epoptes
+#req_nomnr 6415 --archgalli prophet
+#req_targorder 7
+#transform 6415
+#code -1106
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
+#end
+
 #newevent
 #rarity 5 #req_fornation 61 #nation -2  
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
@@ -1993,11 +2057,13 @@ may make the battlefield deadly even for the priest's allies."
 ----newunits
 
 #newarmor 754
-#copyarmor 112
 #name "Clipeus"
-#rcost 2
+#type 4
 #prot 13
+#def 5
+#enc 1
 #end
+
 
 #newweapon 1401
 #copyweapon 21
@@ -2164,5 +2230,6 @@ may make the battlefield deadly even for the priest's allies."
 #gcost 16
 #firstshape 1866
 #end
+
 
 

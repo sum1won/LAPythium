@@ -1,6 +1,6 @@
 #modname "PythiumSyncretism"
 #description "Modifies LA Pythium extensively through the use of cults.  Prophetize a Serpent Priest, Heliodromus, or Epoptes/Reveler to get the full effect"
-#version 2
+#version 3
 #icon "./summod/pythium.tga"
 
 ------

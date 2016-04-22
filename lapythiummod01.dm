@@ -1,6 +1,6 @@
 #modname "PythiumSyncretism"
 #description "Modifies LA Pythium extensively through the use of cults.  Prophetize a Serpent Priest, Heliodromus, or Epoptes/Reveler to get the full effect"
-#version 3
+#version 4
 #icon "./summod/pythium.tga"
 
 ------
@@ -12,7 +12,7 @@
 #rarity 5
 #nation -2 
 #msg "Thank you for playing this mod.  This message exists to let you know that you now have a host of new national spells, units, and abilities - but they can only be used if the appropriate cult is endorsed.  You may endorse a cult by naming a leader of that cult as your prophet.   Prophetizing a Serpent Priest will endorse the Serpent Cult, prophetizing a Heliodromus will endorse the Solar cult, and prophetizing a Reveler or Epoptes will endorse the Cult of Fertility.  NOTE: If, for some reason, such as disciple mode, you cannot create a prophet, you can circumvent this by ordering the appropriate mage to site search in your capital. This message will save to your province history for reference."
-#req_fornation 49
+#req_fornation 61
 #req_owncapital 1
 #req_unique 1
 #end

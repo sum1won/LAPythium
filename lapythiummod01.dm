@@ -855,7 +855,7 @@ may make the battlefield deadly even for the priest's allies."
 #researchbonus -1
 #fireres 10
 #holy
-#gcost 10000
+#gcost 100
 #magicskill 8 1
 #magicskill 0 1
 #custommagic 8320 100
@@ -1668,6 +1668,7 @@ may make the battlefield deadly even for the priest's allies."
 #provrange 3
 #onlyatsite 1817
 #restricted 61
+#fatiguecost 200
 #end
 
 #newspell 
@@ -1765,7 +1766,7 @@ may make the battlefield deadly even for the priest's allies."
 #restricted 61
 #onlyatsite 1817
 #fatiguecost 300
-#school 1
+#school 0
 #researchlevel 5
 #effect 10001
 #damage -1316
@@ -1866,10 +1867,10 @@ may make the battlefield deadly even for the priest's allies."
 #copyspr 1910
 #transformation 0
 #hp 53
+#size 5
 #mr 14
 #mor 15
 #str 20
-#weapon 331
 #prot 14
 #trample
 #animal
@@ -2023,6 +2024,7 @@ may make the battlefield deadly even for the priest's allies."
 #magicboost 8 -3
 #magicskill 8 1
 #prophetshape 6414 --heliopater
+#gcost 90
 #descr "Throughout the Empire, mystery cults have spread and flourished with the influx of foreign culture. One of these, the Serpent Cult, has replaced the official state cult of the Theurgs, but many others ply their trade in secret. The Cult of the Solar Bull is very popular among the soldiers of the Limes and most of its higher members are former soldiers or Centurions. The Heliodromus, Sun-Courier, is the a high ranking member of the Cult of the Solar Bull. He, for it is only males that are allowed in the Cult, performs the Taurobolium, ritual sacrifice of a bull. The Heliodromus carries a golden sacrificial knife. Like all mystics of the Empire, the Heliodromus leads worshippers astray and lowers the Dominion in which he resides. He wears an exotic hat, reputedly similar to those of the foreign founders of the Cult. The Heliodromus forswears his former life upon initiation and does not lead armies. The Heliodromii are secretive and do not share their wisdom with outsiders. This makes them rather poor researchers."
 #end
 #selectmonster 1872 --leo

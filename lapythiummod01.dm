@@ -215,7 +215,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_noench 81
 #killmon 6436
 #end
@@ -226,7 +226,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_noench 81
 #killmon 6436
 #end
@@ -237,7 +237,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_noench 81
 #killmon 6436
 #end
@@ -248,7 +248,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_noench 81
 #killmon 6436
 #end
@@ -259,7 +259,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_noench 81
 #killmon 6436
 #end
@@ -272,7 +272,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_hostileench 81
 #killmon 6436
 #end
@@ -283,7 +283,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_hostileench 81
 #killmon 6436
 #end
@@ -294,7 +294,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_hostileench 81
 #killmon 6436
 #end
@@ -305,7 +305,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_hostileench 81
 #killmon 6436
 #end
@@ -316,7 +316,7 @@
 #nolog
 #notext
 #req_monster 6436
-#req_nomnr 6414
+#req_nomnr 6453
 #req_hostileench 81
 #killmon 6436
 #end
@@ -393,6 +393,162 @@
 #notext
 #end
 
+#newmonster 6452 (?)
+#copystats (Bloodslave)
+#name "Sacrement of the Serpent"
+#copyspr Bloodslave (?)
+#immobile
+#stealth 0
+#end
+
+#newmonster 6453 (?)
+#copystats (Bloodslave)
+#name "Sacrement of the Sun"
+#copyspr Bloodslave (?)
+#immobile
+#stealth 0
+#end
+
+#newmonster 6454 (?)
+#copystats (Bloodslave)
+#name "Sacrement of Fertility"
+#copyspr Bloodslave (?)
+#immobile
+#stealth 0
+#end
+
+
+#newevent -- serpent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "Creation"
+#req_code -1102
+#req_nomnr 6452
+#stealthcom 6452
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1102
+#killcom 6453
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1102
+#killcom 6454
+#end
+
+
+#newevent --sun1
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "Creation"
+#req_code -1104
+#req_nomnr 6453
+#stealthcom 6453
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1104
+#killcom 6467
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1104
+#killcom 6469
+#end
+
+#newevent --sun2
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "Creation"
+#req_code -1107
+#req_nomnr 6468
+#stealthcom 6468
+#end
+
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1107
+#killcom 6467
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1107
+#killcom 6469
+#end
+
+#newevent --nature
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "Creation"
+#req_code -1106
+#req_nomnr 6469
+#stealthcom 6469
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1106
+#killcom 6468
+#end
+#newevent
+#rarity 5
+#nation -2
+#req_fornation 61
+#notext
+#nolog
+#msg "cult end"
+#req_code -1106
+#killcom 6467
+#end
+
 ---- SERPENT CULT
 
 #newmonster 6413-- serpent prophetshape
@@ -437,7 +593,7 @@
 #end
 
 #newevent  #msg "Noprophet. [Temple of the Serpents]." 
-#rarity 5  #req_nomnr 6413 #nation -2 #notext #nolog  #req_site 1
+#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  #req_site 1
 #removesite 1815 
 #end
 
@@ -494,12 +650,12 @@
 #end
 
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6413 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  
 #req_targmnr 6426
 #transform 761
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6413 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 652 #nation -2 #notext #nolog  
 #req_targmnr 6426
 #transform 761
 #end
@@ -541,12 +697,12 @@
 #end
 
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6413 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  
 #req_targmnr 6450
 #transform 830
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6413 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  
 #req_targmnr 6450
 #transform 830
 #end
@@ -884,13 +1040,13 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6414 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
 #req_targmnr 6419
 #transform 1873
 #end
 
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6414 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
 #req_targmnr 6419
 #transform 1873
 #end
@@ -945,13 +1101,13 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6414 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
 #req_targmnr 6420
 #transform 1872
 #end
 
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6414 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
 #req_targmnr 6420
 #transform 1872
 #end
@@ -994,7 +1150,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet. [Mithraea]." 
-#rarity 5  #req_nomnr 6414 #nation -2 #notext #nolog  #req_site 1
+#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  #req_site 1
 #removesite 1816 
 #end
 
@@ -1045,7 +1201,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet. [Mithraea]." 
-#rarity 5  #req_nomnr 6414 #nation -2 #notext #nolog  #req_site 1
+#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  #req_site 1
 #removesite 1818 
 #end
 
@@ -1447,7 +1603,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet. [Anaktoron]." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  #req_site 1
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  #req_site 1
 #removesite 1817
 #end
 
@@ -1498,12 +1654,12 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6421
 #transform 1875
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6421
 #transform 1875
 #end
@@ -1535,12 +1691,12 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6422
 #transform 1876
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6422
 #transform 1876
 #end
@@ -1579,12 +1735,12 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6423
 #transform 1880
 #end
 #newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6423
 #transform 1880
 #end
@@ -1624,12 +1780,12 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet." --galli to heretic1
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6432
 #transform 6451
 #end
 #newevent  #msg "Noprophet." --galli to heretic2
-#rarity 5  #req_nomnr 6415 #nation -2 #notext #nolog  
+#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
 #req_targmnr 6432
 #transform 6451
 #end

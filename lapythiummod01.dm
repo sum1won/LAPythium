@@ -53,7 +53,7 @@
 #msg "nope"
 #req_code 0
 #req_anycode -1100
-#req_monster 6413 --serpent prophet
+#req_monster 6439 --serpent prophet
 #code -1101
 #nolog
 #notext
@@ -65,9 +65,9 @@
 #msg "nope"
 #req_code -1100
 #req_monster 761
-#req_nomnr 6413 --serpent prophet
+#req_nomnr 6439 --serpent prophet
 #req_targorder 7
-#transform 6413
+#transform 6439
 #code -1102
 #msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
 #end
@@ -83,7 +83,7 @@
 #newevent
 #rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
-#req_monster 6413
+#req_monster 6439
 #req_code -1100
 #code -1102
 #end
@@ -104,7 +104,7 @@
 #rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1102
-#req_nomnr 6413
+#req_nomnr 6439
 #req_monster 6414
 #code -1103
 #nolog
@@ -124,7 +124,7 @@
 #rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
 #req_monster 6414
-#req_nomnr 6413
+#req_nomnr 6439
 #req_code -1102
 #code -1104
 #nolog
@@ -134,7 +134,7 @@
 #rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1102
-#req_nomnr 6413
+#req_nomnr 6439
 #req_monster 6415
 #code -1105
 #nolog
@@ -145,7 +145,7 @@
 #rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1102
-#req_nomnr 6413
+#req_nomnr 6439
 #req_monster 6415
 #code -1106
 #end
@@ -154,7 +154,7 @@
 #rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1102
-#req_nomnr 6413
+#req_nomnr 6439
 #req_anycode -1105
 #code -1106
 #end
@@ -395,7 +395,7 @@
 #msg "nope"
 #req_anycode -1104
 #req_nomnr 6414
-#req_monster 6413
+#req_monster 6439
 #code -1101
 #nolog
 #notext
@@ -406,7 +406,7 @@
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1104
 #req_nomnr 6414
-#req_monster 6413
+#req_monster 6439
 #code -1102
 #end
 
@@ -488,7 +488,7 @@
 #msg "nope"
 #req_anycode -1106
 #req_nomnr 6415
-#req_monster 6413
+#req_monster 6439
 #code -1101
 #nolog
 #notext
@@ -499,7 +499,7 @@
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1106
 #req_nomnr 6415
-#req_monster 6413
+#req_monster 6439
 #code -1102
 #end
 
@@ -544,7 +544,7 @@
 
 ---- SERPENT CULT
 
-#newmonster 6413-- serpent prophetshape
+#newmonster 6439-- serpent prophetshape
 #copystats 761
 #copyspr 865
 #descr "The Serpent Cult is one of the many mystery cults that spread to Pythium during the collapse of Ermor. Sauromancers from C'tis were invited by the Emperor and his Theurgs to battle the growing threat and with them came the Serpent Cult. The Serpent Cult was heralded as the answer to the Ermorian threat and quickly received Imperial acceptance. Soon it replaced the Order of the Theurgs as the state cult and grew in influence and power. In the years that have passed since the lizards left Pythium, the Cult has changed. Serpents are venerated and the priests of the Cult wear serpent masks and carry serpent staffs as signs of their office. Serpent Priests constantly expose themselves to poisons and their skin has a deathly pallor. They are skilled in Nature magic and some Water magic."
@@ -633,7 +633,7 @@
 #magicboost 8 1
 #custommagic 14848 100
 #custommagic 14848 20
-#prophetshape 6413
+#prophetshape 6439
 #descr "Serpent Priests are the leaders of the Pythian Serpent Cult. The Serpent Cult is one of the many mystery cults that spread to Pythium during the collapse of Ermor. Sauromancers from C'tis were invited by the Emperor and his Theurgs to battle the growing threat and with them came the Serpent Cult. The Serpent Cult was heralded as the answer to the Ermorian threat and quickly received Imperial acceptance. Soon it replaced the Order of the Theurgs as the state cult and grew in influence and power. In the years that have passed since the lizards left Pythium, the Cult has changed. Serpents are venerated and the priests of the Cult wear serpent masks and carry serpent staffs as signs of their office. Serpent Priests constantly expose themselves to poisons and their skin has a deathly pallor. They are skilled in Nature magic and some Water magic.  With the imprimateur of the new god, their divine authority has increased substantially."
 #userestricteditem 1105
 #end
@@ -2687,11 +2687,11 @@ may make the battlefield deadly even for the priest's allies."
 #magicskill 8 1
 #custommagic 14848 100
 #custommagic 14848 20
-#prophetshape 6413
+#prophetshape 6439
 #descr "Serpent Priests are the leaders of the Pythian Serpent Cult. The Serpent Cult is one of the many mystery cults that spread to Pythium during the collapse of Ermor. Sauromancers from C'tis were invited by the Emperor and his Theurgs to battle the growing threat and with them came the Serpent Cult. The Serpent Cult was heralded as the answer to the Ermorian threat and quickly received Imperial acceptance. Soon it replaced the Order of the Theurgs as the state cult and grew in influence and power. In the years that have passed since the lizards left Pythium, the Cult has changed. Serpents are venerated and the priests of the Cult wear serpent masks and carry serpent staffs as signs of their office. Serpent Priests constantly expose themselves to poisons and their skin has a deathly pallor. They are skilled in Nature magic and some Water magic.  However, without the official imprimateur of the new god, they are still lacking in divine authority."
 #end
 #selectmonster 865
-#prophetshape 6413
+#prophetshape 6439
 #userestricteditem 1105
 #end
 #selectmonster 830 --serpent acolyte

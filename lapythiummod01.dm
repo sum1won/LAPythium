@@ -8,11 +8,11 @@
 #selectnation  61
 #end
 
-#newevent 
+#newevent
 #rarity 5
-#nation -2 
+#nation -2
 #msg "Thank you for playing this mod.  This message exists to let you know that you now have a host of new national spells, units, and abilities - but they can only be used if the appropriate cult is endorsed.  You may endorse a cult by naming a leader of that cult as your prophet.   Prophetizing a Serpent Priest will endorse the Serpent Cult, prophetizing a Heliodromus will endorse the Solar cult, and prophetizing a Reveler or Epoptes will endorse the Cult of Fertility.  NOTE: If, for some reason, such as disciple mode, you cannot create a prophet, you can circumvent this by ordering the appropriate mage to site search in your capital. This message will save to your province history for reference."
-#req_fornation 61
+#req_fornation 49
 #req_owncapital 1
 #req_unique 1
 #end
@@ -30,7 +30,7 @@
 #restricted 9
 #fatiguecost 2000
 #effect 10021
-#damage (INSERT DAUGHTER OF TYPHON HERE)
+#damage 1822
 #end
 
 -----Cult toggle
@@ -38,7 +38,7 @@
 ---Toggle
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_owncapital 1
 #req_fornation 61
@@ -49,7 +49,7 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code 0
 #req_anycode -1100
@@ -61,7 +61,7 @@
 
 
 #newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code -1100
 #req_monster 761
@@ -73,14 +73,15 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
 #req_anycode -1101
 #req_code -1100
 #code -1102
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a priest of the Serpent Cult to be his prophet! The Serpent Cult swells in power and authority, and their temples appear in every city.  Serpent Assassins and Hydras can be recruited in these temples, and, more importantly, they allow new rituals that either summon more Hydras or transform your priests into mighty Serpents."
 #req_monster 6413
 #req_code -1100
@@ -88,7 +89,7 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1102
 #req_code -1101
@@ -97,19 +98,69 @@
 #notext
 #end
 
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
+--- Lamb code
+
+#newevent --Change to sun
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
-#req_code -1102
-#req_nomnr 6413 --serpent prophet
-#code -1100
+#req_anycode -1102
+#req_nomnr 6413
+#req_monster 6414
+#code -1103
 #nolog
 #notext
 #end
 
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#req_anycode -1103
+#req_code -1102
+#code -1104
+#nolog
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#req_monster 6414
+#req_nomnr 6413
+#req_code -1102
+#code -1104
+#nolog
+#end
+
+#newevent --Change to Fert
+#rarity 5 #req_fornation 61 #nation -2
+#msg "nope"
+#req_anycode -1102
+#req_nomnr 6413
+#req_monster 6415
+#code -1105
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1102
+#req_nomnr 6413
+#req_monster 6415
+#code -1106
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1102
+#req_nomnr 6413
+#req_anycode -1105
+#code -1106
+#end
 ---
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code 0
 #req_anycode -1100
@@ -119,9 +170,8 @@
 #notext
 #end
 
-
 #newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code -1100
 #req_monster 1873
@@ -133,7 +183,7 @@
 #end
 
 #newevent --capital prophet
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
 #req_monster 6414
 #req_code -1100
@@ -142,7 +192,7 @@
 #end
 
 #newevent --noncapital prophet
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
 #req_anycode -1103
 #req_code -1100
@@ -151,7 +201,7 @@
 #end
 
 #newevent --leakclose
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1104
 #req_code -1103
@@ -161,35 +211,15 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1104
-#req_nomnr  6414 --helio prphet
-#code -1100
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The Second Sun is a sign of the power of the new god in his aspect of the Solar Bull.  Sacred servants of the Solar Bull shall flood out from every temple!"
 #req_code -1104
-#req_friendlyench 81 
+#req_friendlyench 81
 #code -1107
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
-#msg "nope"
-#req_code -1107
-#req_nomnr  6414 --helio prphet deth
-#code -1100
-#nolog
-#notext
-#end
-
-#newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code -1107
 #req_hostileench 81 --hostilesun
@@ -199,7 +229,7 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code -1107
 #req_noench 81 --nosun
@@ -219,7 +249,8 @@
 #req_noench 81
 #killmon 6436
 #end
-#newevent 
+
+#newevent
 #nation -2
 #rarity 5
 #msg "no eus"
@@ -230,7 +261,8 @@
 #req_noench 81
 #killmon 6436
 #end
-#newevent 
+
+#newevent
 #nation -2
 #rarity 5
 #msg "no eus"
@@ -241,7 +273,8 @@
 #req_noench 81
 #killmon 6436
 #end
-#newevent 
+
+#newevent
 #nation -2
 #rarity 5
 #msg "no eus"
@@ -252,7 +285,8 @@
 #req_noench 81
 #killmon 6436
 #end
-#newevent 
+
+#newevent
 #nation -2
 #rarity 5
 #msg "no eus"
@@ -265,51 +299,7 @@
 #end
 
 --- Five abandonment events for hostile secondsun
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6453
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6453
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6453
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
-#nation -2
-#rarity 5
-#msg "no eus"
-#nolog
-#notext
-#req_monster 6436
-#req_nomnr 6453
-#req_hostileench 81
-#killmon 6436
-#end
-#newevent 
+#newevent
 #nation -2
 #rarity 5
 #msg "no eus"
@@ -321,9 +311,117 @@
 #killmon 6436
 #end
 
+#newevent
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6453
+#req_hostileench 81
+#killmon 6436
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6453
+#req_hostileench 81
+#killmon 6436
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6453
+#req_hostileench 81
+#killmon 6436
+#end
+
+#newevent
+#nation -2
+#rarity 5
+#msg "no eus"
+#nolog
+#notext
+#req_monster 6436
+#req_nomnr 6453
+#req_hostileench 81
+#killmon 6436
+#end
+
+---- Lambcode
+
+#newevent --Change to Fert
+#rarity 5 #req_fornation 61 #nation -2
+#msg "nope"
+#req_anycode -1104
+#req_nomnr 6414
+#req_monster 6415
+#code -1105
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1104
+#req_nomnr 6414
+#req_monster 6415
+#code -1106
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1104
+#req_nomnr 6414
+#req_anycode -1105
+#code -1106
+#end
+
+#newevent --Change to Snek
+#rarity 5 #req_fornation 61 #nation -2
+#msg "nope"
+#req_anycode -1104
+#req_nomnr 6414
+#req_monster 6413
+#code -1101
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1104
+#req_nomnr 6414
+#req_monster 6413
+#code -1102
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
+#req_code -1104
+#req_nomnr 6414
+#req_anycode -1101
+#code -1102
+#end
+
 ----Cult of fertility
 #newevent --notice of prophetization
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code 0
 #req_anycode -1100
@@ -334,7 +432,7 @@
 #end
 
 #newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code -1100
 #req_monster 1880 --reveler
@@ -342,11 +440,11 @@
 #req_targorder 7
 #transform 6415
 #code -1106
-#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals."
 #end
 
 #newevent  --- if you can't name a prophet normally
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_code -1100
 #req_monster 1875 --epoptes
@@ -354,11 +452,11 @@
 #req_targorder 7
 #transform 6415
 #code -1106
-#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." 
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1100
 #req_monster 6415
@@ -366,7 +464,7 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1100
 #req_anycode -1105
@@ -374,7 +472,7 @@
 #end
 
 #newevent --clears eventcode
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1106
 #req_code -1105
@@ -383,170 +481,65 @@
 #notext
 #end
 
-#newevent --prophet dies
-#rarity 5 #req_fornation 61 #nation -2  
+----Lambcode
+
+#newevent --Change to Snek
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
+#req_anycode -1106
+#req_nomnr 6415
+#req_monster 6413
+#code -1101
+#nolog
+#notext
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1106
-#req_nomnr 6415 --epoptes prophet/reveler
-#code -1100
-#nolog
-#notext
-#end
-
-#newmonster 6452 (?)
-#copystats (Bloodslave)
-#name "Sacrement of the Serpent"
-#copyspr Bloodslave (?)
-#immobile
-#stealth 0
-#end
-
-#newmonster 6453 (?)
-#copystats (Bloodslave)
-#name "Sacrement of the Sun"
-#copyspr Bloodslave (?)
-#immobile
-#stealth 0
-#end
-
-#newmonster 6454 (?)
-#copystats (Bloodslave)
-#name "Sacrement of Fertility"
-#copyspr Bloodslave (?)
-#immobile
-#stealth 0
-#end
-
-
-#newevent -- serpent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "Creation"
-#req_code -1102
-#req_nomnr 6452
-#stealthcom 6452
-#end
-#newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
-#req_code -1102
-#killcom 6453
-#end
-#newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
-#req_code -1102
-#killcom 6454
-#end
-
-
-#newevent --sun1
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "Creation"
-#req_code -1104
-#req_nomnr 6453
-#stealthcom 6453
+#req_nomnr 6415
+#req_monster 6413
+#code -1102
 #end
 
 #newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
-#req_code -1104
-#killcom 6467
-#end
-#newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
-#req_code -1104
-#killcom 6469
-#end
-
-#newevent --sun2
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "Creation"
-#req_code -1107
-#req_nomnr 6468
-#stealthcom 6468
-#end
-
-#newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
-#req_code -1107
-#killcom 6467
-#end
-#newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
-#req_code -1107
-#killcom 6469
-#end
-
-#newevent --nature
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "Creation"
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a member of the Cult of Fertility to be his prophet! The Cult of Fertility swells in power and authority, and temples to the god in his aspect of Fertility are erected in every city!  This will allow you to cast the rituals of Fertility and transform Epoptes and Revelers into Galli, who can cast yet more powerful rituals." #req_anycode -1105
 #req_code -1106
-#req_nomnr 6469
-#stealthcom 6469
+#req_nomnr 6414
+#req_anycode -1101
+#code -1102
 #end
-#newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
+
+#newevent --Change to sun
+#rarity 5 #req_fornation 61 #nation -2
+#msg "nope"
+#req_anycode -1106
+#req_nomnr 6415
+#req_monster 6414
+#code -1103
 #nolog
-#msg "cult end"
-#req_code -1106
-#killcom 6468
+#notext
 #end
+
 #newevent
-#rarity 5
-#nation -2
-#req_fornation 61
-#notext
-#nolog
-#msg "cult end"
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#req_anycode -1103
 #req_code -1106
-#killcom 6467
+#code -1104
+#nolog
+#end
+
+#newevent
+#rarity 5 #req_fornation 61 #nation -2
+#msg "The new god has named a Heliodromus to be his prophet! The Cult of the Solar Bull swells in power and authority, and Mithrea, temples to the god in his guise as the Solar Bull are erected in every city!  New rituals can be cast in those temples, which can summon the progeny of the Solar Bull, and transform Leos into mighty champions who are the only ones who can wield specially enchanted items.  Cultists can be recruited in these temples, and they will further increase in power if a Second Sun appears in the sky - a true sign of the Solar Bull."
+#req_monster 6414
+#req_nomnr 6415
+#req_code -1106
+#code -1104
+#nolog
 #end
 
 ---- SERPENT CULT
@@ -570,7 +563,7 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_anycode -1102
 #req_fort 1
@@ -580,8 +573,9 @@
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_code -1102
 #req_fort 1
@@ -592,17 +586,40 @@
 #notext
 #end
 
-#newevent  #msg "Noprophet. [Temple of the Serpents]." 
-#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  #req_site 1
-#removesite 1815 
+#newevent  #msg "Noprophet. [Temple of the Serpents]."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1815
 #end
 
-#newevent  #msg "Nofort. [Temple of the Serpents]." 
+#newevent  #msg "Noprophet. [Temple of the Serpents]."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1815
+#end
+
+#newevent  #msg "Noprophet. [Temple of the Serpents]."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1815
+#end
+
+#newevent  #msg "Noprophet. [Temple of the Serpents]."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1815
+#end
+
+#newevent  #msg "Nofort. [Temple of the Serpents]."
 #rarity 5  #req_fort 0 #nation -2 #notext #nolog  #req_site 1
 #removesite 1815
 #end
 
-#newevent #msg "Enemy. [Temple of the Serpents]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1 
+#newevent #msg "Enemy. [Temple of the Serpents]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1
 #removesite 1815 #end
 
 #newmonster 6426 --serpent priest holyboost
@@ -621,7 +638,7 @@
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_site 1
 #req_capital 1
@@ -630,8 +647,9 @@
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_anycode -1102
 #req_targmnr 761
@@ -639,8 +657,9 @@
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_site 1
 #req_targmnr 761
@@ -649,13 +668,66 @@
 #notext
 #end
 
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
 #req_targmnr 6426
 #transform 761
 #end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 652 #nation -2 #notext #nolog  
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6426
+#transform 761
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6426
+#transform 761
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6426
+#transform 761
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6426
+#transform 761
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
+#req_targmnr 6426
+#transform 761
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6426
+#transform 761
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
 #req_targmnr 6426
 #transform 761
 #end
@@ -665,10 +737,10 @@
 #copyspr 830
 #userestricteditem 1105
 #descr "Serpent Acolytes are lowly priests of the Serpent Cult. Upon joining the Temple, they receive a new name.  They do not wear the distinctive masks of the serpent Priests.  Upon inauguration ot the priesthood, the Acolytes must prove their resistance to the venom of snakes.  Only then is the Acolyte deemed worthy and given the mask and staff.  The acolytes are weak mages of nature, and with the endorsement of the Serpent Cult, they have some divine authority as well."
-#end 
+#end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_site 1
 #req_capital 1
@@ -677,8 +749,9 @@
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_anycode -1102
 #req_targmnr 830
@@ -686,8 +759,9 @@
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Temple of the Serpents]."
 #req_site 1
 #req_targmnr 830
@@ -696,18 +770,71 @@
 #notext
 #end
 
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  
-#req_targmnr 6450
-#transform 830
-#end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6452 #nation -2 #notext #nolog  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
 #req_targmnr 6450
 #transform 830
 #end
 
-#newmonster 6427 --serpent  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6450
+#transform 830
+#end
+
+#newmonster 6427 --serpent
 #name "Serpent"
 #copyspr 295
 #hp 22
@@ -866,16 +993,17 @@
 #nreff 1
 #end
 
-#newevent  #msg "serpentpriest. [Temple of the Serpents]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "serpentpriest. [Temple of the Serpents]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6430
 #req_targmnr 6426
 #transform 6428
 #killmon 6430
 #req_site 1
 #end
-#newevent  #msg "serpentacolyte. [Temple of the Serpents]." 
-#rarity 5  #nation -2 #notext #nolog  
+
+#newevent  #msg "serpentacolyte. [Temple of the Serpents]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6431
 #req_targmnr 830
 #transform 6429
@@ -1011,7 +1139,7 @@ may make the battlefield deadly even for the priest's allies."
 #researchbonus -1
 #fireres 10
 #holy
-#gcost 100
+#gcost 10000
 #magicskill 8 1
 #magicskill 0 1
 #custommagic 8320 100
@@ -1021,7 +1149,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1104
 #req_targmnr 1873
@@ -1030,7 +1158,7 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Mithraea]."
 #req_site 1
 #req_targmnr 1873
@@ -1039,14 +1167,66 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
 #req_targmnr 6419
 #transform 1873
 #end
 
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6419
+#transform 1873
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6419
+#transform 1873
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6419
+#transform 1873
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6419
+#transform 1873
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6419
+#transform 1873
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6419
+#transform 1873
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
 #req_targmnr 6419
 #transform 1873
 #end
@@ -1054,20 +1234,20 @@ may make the battlefield deadly even for the priest's allies."
 #newmonster 6420--leo nonheretic, 2 events
 #name "Leo"
 #copyspr 1872
-#rcost 1 
-#gcost 80 
-#hp 14 
-#mr 11 
-#mor 14 
-#str 12 
-#att 13 
-#def 13 
+#rcost 1
+#gcost 80
+#hp 14
+#mr 11
+#mor 14
+#str 12
+#att 13
+#def 13
 #enc 3
-#mapmove 2 
-#ap 12 
-#goodleader 
+#mapmove 2
+#ap 12
+#goodleader
 #inspirational 1
-#fireres 10 
+#fireres 10
 #magicskill 0 1
 #researchbonus -2
 #firepower 1
@@ -1081,7 +1261,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1104
 #req_targmnr 1872
@@ -1091,7 +1271,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Mithraea]."
 #req_site 1
 #req_targmnr 1872
@@ -1100,14 +1280,66 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
 #req_targmnr 6420
 #transform 1872
 #end
 
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6420
+#transform 1872
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
+#req_targmnr 6420
+#transform 1872
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6420
+#transform 1872
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6420
+#transform 1872
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog
+#req_targmnr 6420
+#transform 1872
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6420
+#transform 1872
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog
 #req_targmnr 6420
 #transform 1872
 #end
@@ -1125,7 +1357,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Mithraea]."
 #req_anycode -1104
 #req_fort 1
@@ -1136,8 +1368,9 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #removesite 1818
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Mithraea]."
 #req_code -1104
 #req_fort 1
@@ -1149,17 +1382,40 @@ may make the battlefield deadly even for the priest's allies."
 #removesite 1818
 #end
 
-#newevent  #msg "Noprophet. [Mithraea]." 
-#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  #req_site 1
-#removesite 1816 
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1816
 #end
 
-#newevent  #msg "Nofort. [Mithraea]." 
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1816
+#end
+
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1816
+#end
+
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1816
+#end
+
+#newevent  #msg "Nofort. [Mithraea]."
 #rarity 5  #req_fort 0 #nation -2 #notext #nolog  #req_site 1
 #removesite 1816
 #end
 
-#newevent #msg "Enemy. [Mithraea]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1 
+#newevent #msg "Enemy. [Mithraea]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1
 #removesite 1816 #end
 
 #newsite 1818--, 4 events
@@ -1175,7 +1431,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Mithraea Prime]."
 #req_anycode -1107
 #req_fort 1
@@ -1188,7 +1444,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Mithraea]."
 #req_code -1107
 #req_fort 1
@@ -1200,17 +1456,40 @@ may make the battlefield deadly even for the priest's allies."
 #removesite 1816
 #end
 
-#newevent  #msg "Noprophet. [Mithraea]." 
-#rarity 5  #req_nomnr 6453 #nation -2 #notext #nolog  #req_site 1
-#removesite 1818 
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_anycode -1106
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1818
 #end
 
-#newevent  #msg "Nofort. [Mithraea]." 
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1818
+#end
+
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1818
+#end
+
+#newevent  #msg "Noprophet. [Mithraea]."
+#rarity 5
+#req_code -1106
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1818
+#end
+
+#newevent  #msg "Nofort. [Mithraea]."
 #rarity 5  #req_fort 0 #nation -2 #notext #nolog  #req_site 1
 #removesite 1818
 #end
 
-#newevent #msg "Enemy. [Mithraea]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1 
+#newevent #msg "Enemy. [Mithraea]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1
 #removesite 1818 #end
 
 #newmonster 6436
@@ -1219,7 +1498,7 @@ may make the battlefield deadly even for the priest's allies."
 #descr "A warrior devoted to the cause of the Solar Bull, the Eusebes Solaris are drawn from the ranks of the Primani Solaris, and are devoted to his cause. More will appear when the New God places a new sun in the sky. They will serve the new god as holy warriors so long as he is aligned with the Solar Bull in some fashion."
 #spr1 "./summod/solsacred_1.tga"
 #spr2 "./summod/solsacred_2.tga"
-#cleararmor 
+#cleararmor
 #armor 126
 #armor "Clipeus"
 #armor 18 --full chain
@@ -1236,7 +1515,7 @@ may make the battlefield deadly even for the priest's allies."
 #descr "A warrior devoted to the cause of the Solar Bull, the Eusebes Solaris are drawn from the ranks of the Primani Solaris, and are devoted to his cause. More will appear when the New God places a new sun in the sky. They will serve the new god as holy warriors so long as he is aligned with the Solar Bull in some fashion."
 #spr1 "./summod/solsacred_1.tga"
 #spr2 "./summod/solsacred_2.tga"
-#cleararmor 
+#cleararmor
 #armor 126
 #armor "Clipeus"
 #armor 18 --full chain
@@ -1580,7 +1859,7 @@ may make the battlefield deadly even for the priest's allies."
 #com 6423
 #end
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_anycode -1106
 #req_fort 1
@@ -1591,7 +1870,7 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_code -1106
 #req_fort 1
@@ -1602,17 +1881,40 @@ may make the battlefield deadly even for the priest's allies."
 #notext
 #end
 
-#newevent  #msg "Noprophet. [Anaktoron]." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  #req_site 1
+#newevent  #msg "Noprophet. [Anaktoron]."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog  #req_site 1
 #removesite 1817
 #end
 
-#newevent  #msg "Nofort. [Anaktoron]." 
+#newevent  #msg "Noprophet. [Anaktoron]."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1817
+#end
+
+#newevent  #msg "Noprophet. [Anaktoron]."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1817
+#end
+
+#newevent  #msg "Noprophet. [Anaktoron]."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog  #req_site 1
+#removesite 1817
+#end
+
+#newevent  #msg "Nofort. [Anaktoron]."
 #rarity 5  #req_fort 0 #nation -2 #notext #nolog  #req_site 1
 #removesite 1817
 #end
 
-#newevent #msg "Enemy. [Anaktoron]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1 
+#newevent #msg "Enemy. [Anaktoron]." #rarity 5 #req_notnation 61 #nation -2 #notext #nolog  #req_site 1
 #removesite 1817 #end
 
 
@@ -1636,7 +1938,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_site 1
 #req_targmnr 1875
@@ -1644,8 +1946,9 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1106
 #req_targmnr 1875
@@ -1653,13 +1956,67 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
 #req_targmnr 6421
 #transform 1875
 #end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6421
+#transform 1875
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6421
+#transform 1875
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6421
+#transform 1875
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
+#req_targmnr 6421
+#transform 1875
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6421
+#transform 1875
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6421
+#transform 1875
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
 #req_targmnr 6421
 #transform 1875
 #end
@@ -1672,8 +2029,9 @@ may make the battlefield deadly even for the priest's allies."
 #holy
 #descr "Throughout the Empire, mystery cults have spread and flourished with the influx of foreign culture. One of these, the Serpent Cult, has replaced the official state cult of the Theurgs, but many others ply their trade in secret. The Cult of Fertility in its aspect of The Great Mother is very popular among women and most of the members in its higher ranks are female. The Mystes is a low ranking follower of the Great Mother.  The liturgy of the mystery cult is heavily influenced by the Arcoscephalean priestesses, but the Mystes are not initiated in the art of healing. Unlike her elder sister, the Epoptes, the Mystes doesn't initiate others into the Cult. She wears a garland and a green dress. As the new god has chosen a member of the Cult of Fertility to be his prophet, they are less unwilling to share secrets with outsiders."
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_site 1
 #req_targmnr 1876
@@ -1681,8 +2039,9 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1106
 #req_targmnr 1876
@@ -1690,13 +2049,67 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
 #req_targmnr 6422
 #transform 1876
 #end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6422
+#transform 1876
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
+#req_targmnr 6422
+#transform 1876
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6422
+#transform 1876
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6422
+#transform 1876
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6422
+#transform 1876
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6422
+#transform 1876
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
 #req_targmnr 6422
 #transform 1876
 #end
@@ -1716,8 +2129,9 @@ may make the battlefield deadly even for the priest's allies."
 #gcost 75
 #magicskill 8 1
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_site 1
 #req_targmnr 1880
@@ -1725,8 +2139,9 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope"
 #req_anycode -1106
 #req_targmnr 1880
@@ -1734,18 +2149,72 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
-#req_targmnr 6423
-#transform 1880
-#end
-#newevent  #msg "Noprophet." 
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
 #req_targmnr 6423
 #transform 1880
 #end
 
-#newmonster 6432 --Galli 
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newevent  #msg "Noprophet."
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6423
+#transform 1880
+#end
+
+#newmonster 6432 --Galli
 #copystats 552
 #name "Galli"
 #descr "Throughout the Empire, mystery cults have spread and flourished with the influx of foreign culture. One of these, the Serpent Cult, has replaced the official state cult of the Theurgs, but many others ply their trade in secret. The Cult of the Fertility is one of these, and is heavily influenced by the arcoscephalian priestesses and pangaean debauchery.  All Galli have sacrificed their fertility to the new god, and have been granted additional powers over nature as a result. Due to their strange and bloody practices, they are unsettling to the general populace."
@@ -1761,7 +2230,7 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_site 1
 #req_targmnr 6451
@@ -1769,8 +2238,9 @@ may make the battlefield deadly even for the priest's allies."
 #nolog
 #notext
 #end
+
 #newevent
-#rarity 5 #req_fornation 61 #nation -2  
+#rarity 5 #req_fornation 61 #nation -2
 #msg "nope [Anaktoron]."
 #req_anycode -1106
 #req_targmnr 6451
@@ -1780,12 +2250,65 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #newevent  #msg "Noprophet." --galli to heretic1
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
 #req_targmnr 6432
 #transform 6451
 #end
+
+#newevent  #msg "Noprophet." --galli to heretic1
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6432
+#transform 6451
+#end
+
 #newevent  #msg "Noprophet." --galli to heretic2
-#rarity 5  #req_nomnr 6454 #nation -2 #notext #nolog  
+#rarity 5
+#req_anycode -1104
+#nation -2 #notext #nolog
+#req_targmnr 6432
+#transform 6451
+#end
+
+#newevent  #msg "Noprophet." --galli to heretic2
+#rarity 5
+#req_anycode -1102
+#nation -2 #notext #nolog
+#req_targmnr 6432
+#transform 6451
+#end
+
+#newevent  #msg "Noprophet." --galli to heretic1
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6432
+#transform 6451
+#end
+
+#newevent  #msg "Noprophet." --galli to heretic1
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
+#req_targmnr 6432
+#transform 6451
+#end
+
+#newevent  #msg "Noprophet." --galli to heretic2
+#rarity 5
+#req_code -1104
+#nation -2 #notext #nolog
+#req_targmnr 6432
+#transform 6451
+#end
+
+#newevent  #msg "Noprophet." --galli to heretic2
+#rarity 5
+#req_code -1102
+#nation -2 #notext #nolog
 #req_targmnr 6432
 #transform 6451
 #end
@@ -1824,10 +2347,9 @@ may make the battlefield deadly even for the priest's allies."
 #provrange 3
 #onlyatsite 1817
 #restricted 61
-#fatiguecost 200
 #end
 
-#newspell 
+#newspell
 #copyspell 973
 #name "Fertility Rite"
 #restricted 61
@@ -1861,7 +2383,7 @@ may make the battlefield deadly even for the priest's allies."
 #nreff 1
 #end
 
-#newspell 
+#newspell
 #name "Guardian of Fertility"
 #descr "With this spell, a Galli transforms themself into the shape of a monsterous boar to find and destroy sneaking enemies. The Galli can change back at will. This spell can only be cast in the temples of the Cult of Fertility."
 #path 0 3
@@ -1878,7 +2400,7 @@ may make the battlefield deadly even for the priest's allies."
 #nreff 1
 #end
 
-#newspell 
+#newspell
 #name "Slayer of Fertility"
 #descr "With this spell, a Galli transforms themself into the shape of a monstrous lion to hunt the enemy.  The Galli has reduced magical powers in this form, but can change back at will. This spell can only be cast in the temples of the Cult of Fertility."
 #path 0 6
@@ -1922,7 +2444,7 @@ may make the battlefield deadly even for the priest's allies."
 #restricted 61
 #onlyatsite 1817
 #fatiguecost 300
-#school 0
+#school 1
 #researchlevel 5
 #effect 10001
 #damage -1316
@@ -2023,10 +2545,10 @@ may make the battlefield deadly even for the priest's allies."
 #copyspr 1910
 #transformation 0
 #hp 53
-#size 5
 #mr 14
 #mor 15
 #str 20
+#weapon 331
 #prot 14
 #trample
 #animal
@@ -2096,8 +2618,8 @@ may make the battlefield deadly even for the priest's allies."
 
 
 --- 4 events transforming into Galli.
-#newevent  #msg "Reveler. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "Reveler. [Anaktoron]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6438
 #req_targmnr 6423
 #transform 6432
@@ -2107,8 +2629,8 @@ may make the battlefield deadly even for the priest's allies."
 #decscale 3
 #end
 
-#newevent  #msg "Epoptes. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "Epoptes. [Anaktoron]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6438
 #req_targmnr 6421
 #transform 6432
@@ -2118,8 +2640,8 @@ may make the battlefield deadly even for the priest's allies."
 #decscale 3
 #end
 
-#newevent  #msg "Epoptes. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "Epoptes. [Anaktoron]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6438
 #req_targmnr 6421
 #transform 6432
@@ -2127,8 +2649,8 @@ may make the battlefield deadly even for the priest's allies."
 #req_site 1
 #end
 
-#newevent  #msg "Reveler. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "Reveler. [Anaktoron]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6438
 #req_targmnr 6423
 #transform 6432
@@ -2136,8 +2658,8 @@ may make the battlefield deadly even for the priest's allies."
 #req_site 1
 #end
 
-#newevent  #msg "boar. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "boar. [Anaktoron]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6446
 #req_targmnr 6432
 #transform 6448
@@ -2146,8 +2668,8 @@ may make the battlefield deadly even for the priest's allies."
 #req_targpath1 3
 #end
 
-#newevent  #msg "lion. [Anaktoron]." 
-#rarity 5  #nation -2 #notext #nolog  
+#newevent  #msg "lion. [Anaktoron]."
+#rarity 5  #nation -2 #notext #nolog
 #req_monster 6445
 #req_targmnr 6432
 #transform 6447
@@ -2180,7 +2702,6 @@ may make the battlefield deadly even for the priest's allies."
 #magicboost 8 -3
 #magicskill 8 1
 #prophetshape 6414 --heliopater
-#gcost 90
 #descr "Throughout the Empire, mystery cults have spread and flourished with the influx of foreign culture. One of these, the Serpent Cult, has replaced the official state cult of the Theurgs, but many others ply their trade in secret. The Cult of the Solar Bull is very popular among the soldiers of the Limes and most of its higher members are former soldiers or Centurions. The Heliodromus, Sun-Courier, is the a high ranking member of the Cult of the Solar Bull. He, for it is only males that are allowed in the Cult, performs the Taurobolium, ritual sacrifice of a bull. The Heliodromus carries a golden sacrificial knife. Like all mystics of the Empire, the Heliodromus leads worshippers astray and lowers the Dominion in which he resides. He wears an exotic hat, reputedly similar to those of the foreign founders of the Cult. The Heliodromus forswears his former life upon initiation and does not lead armies. The Heliodromii are secretive and do not share their wisdom with outsiders. This makes them rather poor researchers."
 #end
 #selectmonster 1872 --leo
@@ -2276,8 +2797,8 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #selectmonster 1865 --limitane solaris
-#cleararmor 
-#clearweapons 
+#cleararmor
+#clearweapons
 #spr1 "./summod/limesol_1.tga"
 #spr2 "./summod/limesol_2.tga"
 #weapon 8
@@ -2289,8 +2810,8 @@ may make the battlefield deadly even for the priest's allies."
 #end
 
 #selectmonster 1863 --limitane
-#cleararmor 
-#clearweapons 
+#cleararmor
+#clearweapons
 #spr1 "./summod/lime_1.tga"
 #spr2 "./summod/lime_2.tga"
 #weapon 8
@@ -2305,8 +2826,8 @@ may make the battlefield deadly even for the priest's allies."
 #selectmonster 2152 --limitane standard
 #spr1 "./summod/limestand_1.tga"
 #spr2 "./summod/limestand_2.tga"
-#cleararmor 
-#clearweapons 
+#cleararmor
+#clearweapons
 #armor 126
 #armor "Clipeus"
 #armor 13
@@ -2320,8 +2841,8 @@ may make the battlefield deadly even for the priest's allies."
 #selectmonster 1867 --comitanse
 #spr1 "./summod/comit_1.tga"
 #spr2 "./summod/comit_2.tga"
-#clearweapons 
-#cleararmor 
+#clearweapons
+#cleararmor
 #armor 126
 #armor "Clipeus"
 #armor 9
@@ -2333,8 +2854,8 @@ may make the battlefield deadly even for the priest's allies."
 #selectmonster 2475 --standard
 #spr1 "./summod/comistand_1.tga"
 #spr2 "./summod/comistand_2.tga"
-#clearweapons 
-#cleararmor 
+#clearweapons
+#cleararmor
 #armor 126
 #armor "Clipeus"
 #armor 9
@@ -2346,7 +2867,7 @@ may make the battlefield deadly even for the priest's allies."
 #selectmonster 1864 --limitane primani
 #spr1 "./summod/limprime_1.tga"
 #spr2 "./summod/limprime_2.tga"
-#cleararmor 
+#cleararmor
 #armor 126
 #armor "Clipeus"
 #armor 18 --full chain
@@ -2359,7 +2880,7 @@ may make the battlefield deadly even for the priest's allies."
 #selectmonster 1866--primani solaris
 #spr1 "./summod/solprime_1.tga"
 #spr2 "./summod/solprime_2.tga"
-#cleararmor 
+#cleararmor
 #armor 126
 #armor "Clipeus"
 #armor 18 --full chain
@@ -2370,7 +2891,7 @@ may make the battlefield deadly even for the priest's allies."
 #selectmonster 1868--palatine --note - may keep armor the same
 --#spr1 "./summod/palatine_1.tga"
 --#spr2 "./summod/palatine_2.tga"
---#cleararmor 
+--#cleararmor
 --#armor 126
 --#armor "Clipeus"
 --#armor 14
@@ -2390,6 +2911,5 @@ may make the battlefield deadly even for the priest's allies."
 #gcost 16
 #firstshape 1866
 #end
-
 
 
